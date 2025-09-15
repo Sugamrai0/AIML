@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/ML Microservices Platform | Flowise + LangChain</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <i class="fas fa-brain"></i>
+                <span>AI/ML Platform</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#architecture" class="nav-link">Architecture</a></li>
+                <li><a href="#demo" class="nav-link">Demo</a></li>
+                <li><a href="#flowise" class="nav-link">Flowise</a></li>
+                <li><a href="#sso" class="nav-link">SSO</a></li>
+                <li><a href="#docs" class="nav-link">API Docs</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="neural-network"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    AI/ML Microservices Platform
+                    <span class="gradient-text">with Flowise + LangChain</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Build and integrate intelligent AI agents with our modular microservices architecture. 
+                    Experience the power of Flowise visual workflows, LangChain integrations, and seamless SSO authentication.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">3</span>
+                        <span class="stat-label">AI Microservices</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Flowise Workflows</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">API Coverage</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="scrollToSection('demo')">
+                        <i class="fas fa-rocket"></i>Try Demo
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('docs')">
+                        <i class="fas fa-book"></i>API Documentation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>AI/ML Microservices</h2>
+                <p>Modular, scalable, and production-ready AI capabilities</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-file-text"></i>
+                    </div>
+                    <h3>Text Summarization</h3>
+                    <p>Intelligent text summarization using advanced LLMs. Process documents and extract key insights automatically.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">LangChain</span>
+                        <span class="feature-tag">Multi-format</span>
+                        <span class="feature-tag">Real-time</span>
+                    </div>
+                    <div class="service-status">
+                        <span class="status-indicator online"></span>
+                        <span>Port 8001</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>Q&A over Documents</h3>
+                    <p>RAG-powered document question answering. Upload documents and ask intelligent questions about their content.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">RAG</span>
+                        <span class="feature-tag">ChromaDB</span>
+                        <span class="feature-tag">Vector Search</span>
+                    </div>
+                    <div class="service-status">
+                        <span class="status-indicator online"></span>
+                        <span>Port 8002</span>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Learning Path Suggestion</h3>
+                    <p>AI-powered personalized learning recommendations. Generate structured learning paths based on user goals and preferences.</p>
+                    <div class="service-features">
+                        <span class="feature-tag">Personalized</span>
+                        <span class="feature-tag">Adaptive</span>
+                        <span class="feature-tag">Structured</span>
+                    </div>
+                    <div class="service-status">
+                        <span class="status-indicator online"></span>
+                        <span>Port 8003</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <div class="section-header">
+                <h2>System Architecture</h2>
+                <p>Microservices architecture with Flowise orchestration</p>
+            </div>
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <h4>Client Layer</h4>
+                    <div class="arch-components">
+                        <div class="arch-component client">
+                            <i class="fas fa-desktop"></i>
+                            <span>Web Client</span>
+                        </div>
+                        <div class="arch-component client">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile App</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="arch-layer">
+                    <h4>API Gateway</h4>
+                    <div class="arch-components">
+                        <div class="arch-component gateway">
+                            <i class="fas fa-server"></i>
+                            <span>Main API (8000)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="arch-layer">
+                    <h4>Microservices</h4>
+                    <div class="arch-components">
+                        <div class="arch-component service">
+                            <i class="fas fa-file-text"></i>
+                            <span>Text Sum (8001)</span>
+                        </div>
+                        <div class="arch-component service">
+                            <i class="fas fa-question-circle"></i>
+                            <span>Q&A Docs (8002)</span>
+                        </div>
+                        <div class="arch-component service">
+                            <i class="fas fa-route"></i>
+                            <span>Learning Path (8003)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="arch-layer">
+                    <h4>AI Orchestration</h4>
+                    <div class="arch-components">
+                        <div class="arch-component orchestration">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Flowise (3000)</span>
+                        </div>
+                        <div class="arch-component orchestration">
+                            <i class="fas fa-brain"></i>
+                            <span>LLM Providers</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="arch-layer">
+                    <h4>Data Layer</h4>
+                    <div class="arch-components">
+                        <div class="arch-component data">
+                            <i class="fas fa-database"></i>
+                            <span>ChromaDB</span>
+                        </div>
+                        <div class="arch-component data">
+                            <i class="fas fa-folder"></i>
+                            <span>File Storage</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2>Interactive API Demo</h2>
+                <p>Test our AI microservices in real-time</p>
+            </div>
+            
+            <div class="demo-tabs">
+                <button class="tab-btn active" data-tab="summarization">Text Summarization</button>
+                <button class="tab-btn" data-tab="qa">Q&A Documents</button>
+                <button class="tab-btn" data-tab="learning">Learning Path</button>
+            </div>
+            
+            <!-- Text Summarization Demo -->
+            <div id="summarization" class="demo-content active">
+                <div class="demo-panel">
+                    <div class="demo-input">
+                        <h4>Input Text</h4>
+                        <textarea id="summaryText" placeholder="Enter text to summarize..." rows="8">Artificial intelligence (AI) is transforming the way we work, learn, and interact with technology. From machine learning algorithms that can predict user behavior to natural language processing systems that can understand and generate human-like text, AI is becoming increasingly sophisticated. The development of large language models has opened up new possibilities for automated content creation, intelligent tutoring systems, and conversational AI agents. However, with these advances come important considerations about ethics, bias, and the responsible deployment of AI systems in society.</textarea>
+                        <div class="demo-actions">
+                            <button class="btn btn-primary" onclick="summarizeText()">
+                                <i class="fas fa-magic"></i>Summarize Text
+                            </button>
+                            <button class="btn btn-secondary" onclick="uploadDocument('summary')">
+                                <i class="fas fa-upload"></i>Upload Document
+                            </button>
+                        </div>
+                        <input type="file" id="summaryFile" style="display: none;" accept=".pdf,.docx,.txt">
+                    </div>
+                    <div class="demo-output">
+                        <h4>AI Summary</h4>
+                        <div id="summaryResult" class="result-container">
+                            <div class="placeholder">
+                                <i class="fas fa-brain"></i>
+                                <p>Your AI-generated summary will appear here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Q&A Demo -->
+            <div id="qa" class="demo-content">
+                <div class="demo-panel">
+                    <div class="demo-input">
+                        <h4>Document Q&A</h4>
+                        <div class="file-upload-area" id="qaUploadArea">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Upload a document (PDF, DOCX, TXT)</p>
+                            <button class="btn btn-secondary" onclick="uploadDocument('qa')">Choose File</button>
+                        </div>
+                        <input type="file" id="qaFile" style="display: none;" accept=".pdf,.docx,.txt">
+                        
+                        <div class="question-input" id="questionSection" style="display: none;">
+                            <h5>Ask a Question</h5>
+                            <input type="text" id="questionText" placeholder="What would you like to know about this document?">
+                            <button class="btn btn-primary" onclick="askQuestion()">
+                                <i class="fas fa-question"></i>Ask Question
+                            </button>
+                        </div>
+                    </div>
+                    <div class="demo-output">
+                        <h4>AI Answer</h4>
+                        <div id="qaResult" class="result-container">
+                            <div class="placeholder">
+                                <i class="fas fa-search"></i>
+                                <p>Upload a document and ask questions to get AI-powered answers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Learning Path Demo -->
+            <div id="learning" class="demo-content">
+                <div class="demo-panel">
+                    <div class="demo-input">
+                        <h4>Learning Path Generator</h4>
+                        <textarea id="learningGoal" placeholder="Describe your learning goals..." rows="4">I want to learn machine learning and become proficient in building AI applications. I have basic programming knowledge in Python but no experience with ML frameworks.</textarea>
+                        
+                        <div class="learning-options">
+                            <div class="option-group">
+                                <label>Experience Level:</label>
+                                <select id="experienceLevel">
+                                    <option value="beginner">Beginner</option>
+                                    <option value="intermediate">Intermediate</option>
+                                    <option value="advanced">Advanced</option>
+                                </select>
+                            </div>
+                            <div class="option-group">
+                                <label>Time Commitment:</label>
+                                <select id="timeCommitment">
+                                    <option value="1-2 hours/week">1-2 hours/week</option>
+                                    <option value="3-5 hours/week">3-5 hours/week</option>
+                                    <option value="6-10 hours/week">6-10 hours/week</option>
+                                    <option value="10+ hours/week">10+ hours/week</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-actions">
+                            <button class="btn btn-primary" onclick="generateLearningPath()">
+                                <i class="fas fa-route"></i>Generate Learning Path
+                            </button>
+                        </div>
+                    </div>
+                    <div class="demo-output">
+                        <h4>Personalized Learning Path</h4>
+                        <div id="learningResult" class="result-container">
+                            <div class="placeholder">
+                                <i class="fas fa-graduation-cap"></i>
+                                <p>Your personalized learning path will be generated here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flowise Integration Section -->
+    <section id="flowise" class="flowise">
+        <div class="container">
+            <div class="section-header">
+                <h2>Flowise Integration</h2>
+                <p>Visual AI workflow builder and orchestration platform</p>
+            </div>
+            
+            <div class="flowise-content">
+                <div class="flowise-features">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h4>Visual Workflow Builder</h4>
+                        <p>Create complex AI workflows using a drag-and-drop interface with LangChain components.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h4>LLM Integration</h4>
+                        <p>Connect to multiple LLM providers including OpenAI, Anthropic, and local models.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h4>API Orchestration</h4>
+                        <p>Centralized AI processing engine that handles requests from all microservices.</p>
+                    </div>
+                </div>
+                
+                <div class="flowise-demo">
+                    <div class="demo-header">
+                        <h4>Flowise Dashboard</h4>
+                        <div class="flowise-status">
+                            <span class="status-indicator online"></span>
+                            <span>Running on Port 3000</span>
+                        </div>
+                    </div>
+                    <div class="flowise-preview">
+                        <iframe id="flowiseFrame" src="" width="100%" height="400" style="border: none; border-radius: 8px; background: #f5f5f5;"></iframe>
+                        <div class="flowise-overlay">
+                            <button class="btn btn-primary" onclick="openFlowise()">
+                                <i class="fas fa-external-link-alt"></i>Open Flowise Dashboard
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SSO Demo Section -->
+    <section id="sso" class="sso">
+        <div class="container">
+            <div class="section-header">
+                <h2>Single Sign-On (SSO) Integration</h2>
+                <p>Secure authentication with OAuth and OpenID Connect</p>
+            </div>
+            
+            <div class="sso-content">
+                <div class="sso-providers">
+                    <div class="provider-card">
+                        <div class="provider-icon">
+                            <i class="fab fa-google"></i>
+                        </div>
+                        <h4>Google OAuth</h4>
+                        <p>Authenticate users with their Google accounts using OAuth 2.0 protocol.</p>
+                        <button class="btn btn-secondary" onclick="demonstrateSSO('google')">
+                            <i class="fas fa-sign-in-alt"></i>Demo Login
+                        </button>
+                    </div>
+                    
+                    <div class="provider-card">
+                        <div class="provider-icon">
+                            <i class="fab fa-microsoft"></i>
+                        </div>
+                        <h4>Microsoft Azure AD</h4>
+                        <p>Enterprise authentication with Azure Active Directory and OpenID Connect.</p>
+                        <button class="btn btn-secondary" onclick="demonstrateSSO('microsoft')">
+                            <i class="fas fa-sign-in-alt"></i>Demo Login
+                        </button>
+                    </div>
+                    
+                    <div class="provider-card">
+                        <div class="provider-icon">
+                            <i class="fas fa-id-card"></i>
+                        </div>
+                        <h4>Custom OIDC</h4>
+                        <p>Flexible authentication with custom OpenID Connect providers.</p>
+                        <button class="btn btn-secondary" onclick="demonstrateSSO('custom')">
+                            <i class="fas fa-sign-in-alt"></i>Demo Login
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="sso-demo">
+                    <div class="auth-status">
+                        <h4>Authentication Status</h4>
+                        <div id="authStatus" class="auth-info">
+                            <div class="auth-indicator">
+                                <span class="status-indicator offline"></span>
+                                <span>Not Authenticated</span>
+                            </div>
+                            <div class="auth-details">
+                                <p>Click on any provider above to simulate SSO authentication flow</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Documentation Section -->
+    <section id="docs" class="docs">
+        <div class="container">
+            <div class="section-header">
+                <h2>API Documentation</h2>
+                <p>Complete reference for all microservice endpoints</p>
+            </div>
+            
+            <div class="api-docs">
+                <div class="api-service">
+                    <div class="service-header">
+                        <h3>Text Summarization API</h3>
+                        <span class="base-url">http://localhost:8001</span>
+                    </div>
+                    <div class="endpoints">
+                        <div class="endpoint">
+                            <div class="method-url">
+                                <span class="method post">POST</span>
+                                <span class="url">/summarize</span>
+                            </div>
+                            <p>Summarize text content using AI</p>
+                        </div>
+                        <div class="endpoint">
+                            <div class="method-url">
+                                <span class="method post">POST</span>
+                                <span class="url">/summarize-document</span>
+                            </div>
+                            <p>Summarize uploaded document content</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="api-service">
+                    <div class="service-header">
+                        <h3>Q&A Documents API</h3>
+                        <span class="base-url">http://localhost:8002</span>
+                    </div>
+                    <div class="endpoints">
+                        <div class="endpoint">
+                            <div class="method-url">
+                                <span class="method post">POST</span>
+                                <span class="url">/upload-document</span>
+                            </div>
+                            <p>Upload document for Q&A processing</p>
+                        </div>
+                        <div class="endpoint">
+                            <div class="method-url">
+                                <span class="method post">POST</span>
+                                <span class="url">/ask</span>
+                            </div>
+                            <p>Ask questions about uploaded documents</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="api-service">
+                    <div class="service-header">
+                        <h3>Learning Path API</h3>
+                        <span class="base-url">http://localhost:8003</span>
+                    </div>
+                    <div class="endpoints">
+                        <div class="endpoint">
+                            <div class="method-url">
+                                <span class="method post">POST</span>
+                                <span class="url">/suggest-path</span>
+                            </div>
+                            <p>Generate personalized learning path</p>
+                        </div>
+                        <div class="endpoint">
+                            <div class="method-url">
+                                <span class="method post">POST</span>
+                                <span class="url">/suggest-path-json</span>
+                            </div>
+                            <p>Generate learning path with structured input</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="docs-actions">
+                <button class="btn btn-primary" onclick="openSwaggerDocs()">
+                    <i class="fas fa-book-open"></i>Interactive API Docs
+                </button>
+                <button class="btn btn-secondary" onclick="downloadPostmanCollection()">
+                    <i class="fas fa-download"></i>Postman Collection
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AI/ML Platform</h4>
+                    <p>Modular microservices for intelligent applications</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-docker"></i></a>
+                        <a href="#"><i class="fas fa-book"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#demo">Text Summarization</a></li>
+                        <li><a href="#demo">Q&A Documents</a></li>
+                        <li><a href="#demo">Learning Paths</a></li>
+                        <li><a href="#flowise">Flowise Integration</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#docs">API Documentation</a></li>
+                        <li><a href="#architecture">Architecture</a></li>
+                        <li><a href="#sso">SSO Guide</a></li>
+                        <li><a href="#">GitHub Repository</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Technology Stack</h4>
+                    <ul>
+                        <li>FastAPI & Python</li>
+                        <li>LangChain Framework</li>
+                        <li>Flowise Platform</li>
+                        <li>ChromaDB Vector Store</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AI/ML Microservices Platform. Built for educational and demonstration purposes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Processing with AI...</p>
+        </div>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
